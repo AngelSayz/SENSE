@@ -67,6 +67,111 @@ This project uses a **monorepo** structure that contains both the **frontend** a
 
 1. **Clone the Repository:**
 
-   ```bash
+   
+bash
    git clone https://github.com/AngelSayz/SENSE.git
    cd SENSE
+   Setup Environment Variables:
+
+Create a .env file in the backend directory with your MongoDB connection string and other configuration details:
+
+env
+Copiar
+Editar
+MONGO_URI=mongodb://localhost:27017/sense_db
+PORT=3000
+JWT_SECRET=your_jwt_secret
+Install Dependencies:
+
+For the backend:
+
+bash
+Copiar
+Editar
+cd backend
+npm install
+For the frontend:
+
+bash
+Copiar
+Editar
+cd ../frontend
+npm install
+Running the Application
+Backend:
+
+In the backend directory, start the server. Using nodemon is recommended for development:
+
+bash
+Copiar
+Editar
+npm run dev
+Frontend:
+
+In the frontend directory, launch the React Native app:
+
+bash
+Copiar
+Editar
+npx react-native run-android
+# or for iOS:
+npx react-native run-ios
+Project Structure
+A typical structure for this monorepo might look like:
+
+plaintext
+Copiar
+Editar
+SENSE/
+├── backend/                # Node.js server and API
+│   ├── controllers/        # Business logic and controllers
+│   ├── models/             # Mongoose models for MongoDB
+│   ├── routes/             # API routes
+│   ├── config/             # Database connection and configuration
+│   ├── .env                # Environment variables (not tracked)
+│   └── app.js              # Main server file
+├── frontend/               # React Native mobile application
+│   ├── src/
+│   │   ├── components/     # UI components
+│   │   ├── screens/        # Application screens
+│   │   ├── services/       # API service integration
+│   │   └── assets/         # Images, fonts, etc.
+│   └── App.js              # Entry point for React Native
+├── .gitignore              # Excludes node_modules, .env, etc.
+└── README.md               # This file
+Contributing
+Contributions are welcome! Please follow these steps:
+
+Fork the repository.
+
+Create your feature branch:
+
+bash
+Copiar
+Editar
+git checkout -b feature/YourFeature
+Commit your changes with descriptive messages:
+
+bash
+Copiar
+Editar
+git commit -m 'Add some feature'
+Push your branch:
+
+bash
+Copiar
+Editar
+git push origin feature/YourFeature
+Open a Pull Request for review.
+
+For detailed contribution guidelines, please see CONTRIBUTING.md.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+For questions, suggestions, or collaboration, please reach out:
+
+Project Manager: Mayo Ramos Angel David
+Backend/Database Developer: Alvarez Galido Aldo Yamil
+Frontend/Designer: Muñoz Reynoso Oscar Gael

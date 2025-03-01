@@ -1,32 +1,29 @@
-// app.js
+require('dotenv').config();  // Cargar variables de entorno desde .env
+
+console.log('MONGO_URI:', process.env.MONGO_URI);
+
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
+const cors = require('cors');
 
-const app = express();
+const app = express(); // 🔹 Aquí se inicializa 'app'
 
-// Middleware para parsear JSON
-app.use(express.json());
+// Middleware
+app.use(cors({ origin: '*' }));  // 🔹 Ahora se usa después de inicializar 'app'
+app.use(express.json());  // Para parsear el cuerpo de las solicitudes como JSON
 
 // Conectar a MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log("Conectado a MongoDB"))
-.catch(err => console.error("Error al conectar a MongoDB:", err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Conectado a MongoDB'))
+  .catch(err => console.error('Error al conectar a MongoDB:', err));
 
-// Ruta de prueba
+// Definir una ruta de prueba
 app.get('/', (req, res) => {
-  res.send("Servidor Node.js y MongoDB funcionando");
+  res.json({ message: 'API funcionando' });
 });
 
-// Definir el puerto y levantar el servidor
-const PORT = process.env.PORT || 3000;
+// Escuchar el servidor en el puerto especificado
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
-
-const userRoutes = require('./src/routes/userRoutes');
-app.use('/api/users', userRoutes);
-

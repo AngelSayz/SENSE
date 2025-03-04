@@ -4,6 +4,11 @@ import WebView from 'react-native-webview';
 import { ThemedView } from './ThemedView';
 import { ThemedText } from './ThemedText';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import Constants from 'expo-constants';
+
+// Get Mapbox token from environment variables - make sure to replace this in .env file
+// The token is loaded from frontend/.env
+const MAPBOX_TOKEN = process.env.EXPO_PUBLIC_MAPBOX_TOKEN || 'your_mapbox_token_here';
 
 type Location = {
   latitude: number;
@@ -56,7 +61,7 @@ export default function MapView({ style, initialLocation, onLocationChange }: Ma
       <div id="map"></div>
       <script>
         // Replace with your actual Mapbox access token
-        mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+        mapboxgl.accessToken = '${MAPBOX_TOKEN}';
         
         const map = new mapboxgl.Map({
           container: 'map',

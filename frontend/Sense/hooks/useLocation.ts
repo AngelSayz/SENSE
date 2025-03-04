@@ -45,10 +45,10 @@ export const useLocation = (shouldTrack = false): LocationState => {
       setLocation({
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,
-        accuracy: location.coords.accuracy,
-        altitude: location.coords.altitude,
-        heading: location.coords.heading,
-        speed: location.coords.speed,
+        accuracy: location.coords.accuracy || undefined,
+        altitude: location.coords.altitude || undefined,
+        heading: location.coords.heading || undefined,
+        speed: location.coords.speed || undefined,
         timestamp: location.timestamp,
       });
     } catch (err) {
@@ -82,10 +82,10 @@ export const useLocation = (shouldTrack = false): LocationState => {
             setLocation({
               latitude: location.coords.latitude,
               longitude: location.coords.longitude,
-              accuracy: location.coords.accuracy,
-              altitude: location.coords.altitude,
-              heading: location.coords.heading,
-              speed: location.coords.speed,
+              accuracy: location.coords.accuracy || undefined,
+              altitude: location.coords.altitude || undefined,
+              heading: location.coords.heading || undefined,
+              speed: location.coords.speed || undefined,
               timestamp: location.timestamp,
             });
           }

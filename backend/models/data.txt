@@ -1,0 +1,216 @@
+users:
+[
+  {
+    "name": "Juan",
+    "lastname": "Perez",
+    "surname": "Lopez",
+    "username": "juanp",
+    "email": "juan@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "user",
+    "recovery_code": "code1"
+  },
+  {
+    "name": "Maria",
+    "lastname": "Gomez",
+    "surname": "Diaz",
+    "username": "mariag",
+    "email": "maria@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "user",
+    "recovery_code": "code2"
+  },
+  {
+    "name": "Luis",
+    "lastname": "Martinez",
+    "surname": "Fernandez",
+    "username": "luism",
+    "email": "luis@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "user",
+    "recovery_code": "code3"
+  },
+  {
+    "name": "Ana",
+    "lastname": "Ruiz",
+    "surname": "Castillo",
+    "username": "anar",
+    "email": "ana@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "user",
+    "recovery_code": "code4"
+  }
+]
+
+
+post:
+[
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393838" },
+    "title": "Fuga de agua",
+    "type_of_incident": "Infraestructura",
+    "description": "Fuga en la calle principal",
+    "images": [],
+    "location": {},
+    "date_of_published": "2024-02-19T12:00:00Z",
+    "reactions": [],
+    "comments": []
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393839" },
+    "title": "Árbol caído",
+    "type_of_incident": "Naturaleza",
+    "description": "Árbol bloqueando la vía",
+    "images": [],
+    "location": {},
+    "date_of_published": "2024-02-19T13:00:00Z",
+    "reactions": [],
+    "comments": []
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e635739383a" },
+    "title": "Corte de electricidad",
+    "type_of_incident": "Infraestructura",
+    "description": "Zona sin luz",
+    "images": [],
+    "location": {},
+    "date_of_published": "2024-02-19T14:00:00Z",
+    "reactions": [],
+    "comments": []
+  }
+]
+
+
+suervisors:
+[
+  {
+    "name": "Carlos",
+    "lastname": "Martinez",
+    "surname": "Gomez",
+    "email": "carlos@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "supervisor",
+    "recovery_code": "code6"
+  },
+  {
+    "name": "Lucia",
+    "lastname": "Garcia",
+    "surname": "Torres",
+    "email": "lucia@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "supervisor",
+    "recovery_code": "code7"
+  },
+  {
+    "name": "Fernando",
+    "lastname": "Lopez",
+    "surname": "Sanchez",
+    "email": "fernando@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "supervisor",
+    "recovery_code": "code8"
+  },
+  {
+    "name": "Elena",
+    "lastname": "Fernandez",
+    "surname": "Ortega",
+    "email": "elena@example.com",
+    "password": "hashed_password",
+    "photo": "url_photo",
+    "role": "supervisor",
+    "recovery_code": "code9"
+  }
+]
+
+
+record: 
+[
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393838" },
+    "title": "Reporte de semáforo dañado",
+    "type_of_incident": "Vialidad",
+    "description": "Semáforo no funciona",
+    "images": [],
+    "location": {},
+    "date_of_published": "2024-02-19T15:00:00Z",
+    "reactions": [],
+    "comments": [{}]
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393839" },
+    "title": "Reporte de semáforo dañado",
+    "type_of_incident": "Vialidad",
+    "description": "Semáforo no funciona",
+    "images": [],
+    "location": {},
+    "date_of_published": "2024-02-19T15:00:00Z",
+    "reactions": [],
+    "comments": [{}]
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e635739383a" },
+    "title": "Reporte de semáforo dañado",
+    "type_of_incident": "Vialidad",
+    "description": "Semáforo no funciona",
+    "images": [],
+    "location": {},
+    "date_of_published": "2024-02-19T15:00:00Z",
+    "reactions": [],
+    "comments": [{}]
+  }
+]
+
+
+notifications:
+[
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393838" },
+    "title": "Fuga de agua",
+    "read": false
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393839" },
+    "title": "Árbol caído",
+    "read": false
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e635739383a" },
+    "title": "Corte de electricidad",
+    "read": false
+  }
+]
+
+comments:
+[
+  {
+    "id_user": { "$oid": "67c68f4ffa247e635739383a" },
+    "id_post": { "$oid": "67c68f4ffa247e6357393838" },
+    "comment": "Esto es preocupante, hay que actuar rápido.",
+    "date": "2024-02-19T12:45:00Z"
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393838" },
+    "id_post": { "$oid": "67c68f4ffa247e6357393838" },
+    "comment": "Esto es preocupante, hay que actuar rápido.",
+    "date": "2024-02-19T12:45:00Z"
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393838" },
+    "id_post": { "$oid": "67c68f4ffa247e6357393839" },
+    "comment": "Esto es preocupante, hay que actuar rápido.",
+    "date": "2024-02-19T12:45:00Z"
+  },
+  {
+    "id_user": { "$oid": "67c68f4ffa247e6357393839" },
+    "id_post": { "$oid": "67c68f4ffa247e635739383a" },
+    "comment": "Esto es preocupante, hay que actuar rápido.",
+    "date": "2024-02-19T12:45:00Z"
+  }
+]
